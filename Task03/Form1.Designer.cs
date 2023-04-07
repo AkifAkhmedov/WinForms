@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace Task03
 {
     partial class Form1
     {

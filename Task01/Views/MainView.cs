@@ -15,7 +15,8 @@ namespace Task01.Views
         public MainView()
         {
             InitializeComponent();
-            
+             this.Text = "sadasasd";
         }
+
     }
 }

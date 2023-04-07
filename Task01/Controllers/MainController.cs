@@ -12,7 +12,8 @@ namespace Task01.Controllers
     {
         MainView MainView { get; set; } = new MainView();
         public MainController() {
-            MainView.label1.Text = "Akif";
+            MainView.Text = "Akif";
+
         }
     }
 }

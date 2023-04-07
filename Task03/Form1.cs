@@ -43,7 +43,7 @@ namespace Task03
                 int width = this.Width;
                 if (x == 0 || y == 0 || x == width || y == height)
                 {
-                    this.Text = "Хуй знает что ";
+                    this.Text = "Неизвестная область ";
                 }
                 else if (x < (width - 100)  && y < (height - 100))
                 {

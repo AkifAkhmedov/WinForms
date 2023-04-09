@@ -1,8 +1,5 @@
 ﻿using Binance.Net.Clients;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,12 +23,13 @@ namespace Task05.Model
 
         private async void SubscribeToMarkPriceUpdatesAsync()
         {
+
             await Task.Run(async () =>
             {
                 BinanceSocketClient socketClient = new BinanceSocketClient();
                 try
                 {
-                    var res1 = await socketClient.UsdFuturesStreams.SubscribeToMarkPriceUpdatesAsync(SymbolPrice.ToString(), updateInterval: 1000, message =>
+                    var res1 = await socketClient.UsdFuturesStreams.SubscribeToMarkPriceUpdatesAsync(SymbolName, updateInterval: 1000, message =>
                     {
                         SymbolPrice = message.Data.MarkPrice;
 
@@ -44,6 +42,7 @@ namespace Task05.Model
                 {
                     MessageBox.Show(ex.Message);
                 }
+
             });
         }
     }

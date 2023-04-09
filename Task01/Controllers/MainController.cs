@@ -13,7 +13,7 @@ namespace Task01.Controllers
         MainView MainView { get; set; } = new MainView();
         public MainController() {
             MainView.Text = "Akif";
-
+            MainView.setText(" text change");
         }
     }
 }
